@@ -9,3 +9,12 @@
     </dependency>
 ```
 
+删除spring的自动配置
+```java
+@SpringBootApplication(exclude = {RabbitAutoConfiguration.class})
+public class MiddleApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MiddleApplication.class, args);
+    }
+}
+```
